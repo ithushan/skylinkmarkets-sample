@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Skylink Markets</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#96b9ff",
+                        "tertiary-container": "#2b1d00",
+                        "tertiary": "#0b0600",
+                        "on-surface": "#1b1b1e",
+                        "surface-bright": "#fbf9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e5",
+                        "on-secondary-container": "#204886",
+                        "on-secondary-fixed": "#001a40",
+                        "outline-variant": "#c4c6ce",
+                        "on-background": "#1b1b1e",
+                        "primary": "#000615",
+                        "surface-container-high": "#e9e7ea",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#b5c7ea",
+                        "on-tertiary-container": "#ad7f00",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-surface-variant": "#44474d",
+                        "surface-tint": "#4d5f7d",
+                        "primary-container": "#0b1f3a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbd9dc",
+                        "tertiary-fixed": "#ffdea3",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#395e9d",
+                        "on-tertiary-fixed": "#261900",
+                        "surface": "#fbf9fb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b5c7ea",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-secondary-fixed-variant": "#1d4684",
+                        "outline": "#75777e",
+                        "error": "#ba1a1a",
+                        "surface-container": "#efedf0",
+                        "background": "#fbf9fb",
+                        "surface-container-highest": "#e4e2e5",
+                        "surface-container-low": "#f5f3f6",
+                        "on-primary-fixed": "#071c36",
+                        "on-primary-container": "#7587a7",
+                        "tertiary-fixed-dim": "#fdbc13",
+                        "inverse-surface": "#303033",
+                        "on-primary-fixed-variant": "#364764",
+                        "inverse-on-surface": "#f2f0f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "xxl": "64px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "container-max": "1440px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "sm": "8px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "numeric-data": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "numeric-data": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            box-shadow: 0 20px 25px -5px rgba(11, 31, 58, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md dark:bg-slate-950/80 border-b border-white/10 shadow-xl shadow-slate-950/20">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <div class="text-2xl font-bold tracking-tight text-white font-h1">Skylink Markets</div>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="index.html">Home</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="about.html">About</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="market.html">Markets</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="account.html">Accounts</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="platform.html">Platform</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="security.html">Security</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="faq.html">FAQ</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="contact.html">Contact</a>
+            </div>
+            </div>
+            <button
+                class="bg-amber-500 text-primary-container px-6 py-2 rounded-lg font-bold text-sm hover:bg-amber-400 transition-all duration-400 scale-95 active:scale-90">Open
+                Account</button>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[716px] flex items-center pt-24 overflow-hidden bg-primary-container">
+            <div class="absolute inset-0 opacity-20 pointer-events-none">
+                <img alt="" class="w-full h-full object-cover"
+                    data-alt="abstract architectural lines and glass structures in deep blue and gold tones with professional high-tech lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_FdccM1-tntGlCLxtPozg1xj0qVc2np8jHQT-26dB6X92WO_sFv4FiQrwmAOYlDQefv1P1oZ7hTc9VizAr3EJx9a79OLODUNgTggg-iWJjGLCbC0lMvtT5NOPLhF3bjdcGxlwZzNzihEbYLmQU1DqEzAB3B2w8IgRtxDFBIky6Op1lXBbVC10zXCwYj6BP8imqKo26vMq9dh1ptsXo89xQyAjpST5H-lZFBzGYVkgXMkX3ejFtQkxqmyx7YINLo8Zn85OuxzuX91M" />
+            </div>
+            <div class="container mx-auto px-8 relative z-10">
+                <div class="max-w-3xl">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-amber-500/10 text-amber-500 font-label-caps text-label-caps mb-6 uppercase">Since
+                        2012</span>
+                    <h1 class="font-display text-display text-white mb-8">Our Story — Empowering Every Trader</h1>
+                    <p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl">Skylink Markets was founded
+                        on a simple principle: high-performance trading should be accessible, transparent, and built on
+                        institutional-grade technology.</p>
+                </div>
+            </div>
+            <div class="absolute bottom-0 right-0 w-1/3 h-full hidden lg:block">
+                <div
+                    class="h-full w-full bg-gradient-to-l from-primary-container via-transparent to-transparent absolute inset-0 z-10">
+                </div>
+                <img alt="" class="w-full h-full object-cover opacity-40"
+                    data-alt="close up of a high-end trading desk with multiple monitors showing complex financial charts and data visualizations"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaK1BKWgbO6zyyc4_A7qBVv4zDGghB0tqBmPHEx_JVMfFa07FbLwkN4XY0Z37D_xelCowInIaJLhoI7P-85PMSPpR2Jy1C8uF0FBwGIh7KwlJ5aADLP6jVj4JQ8QchU3uwYQIUTMcBBn9Fj3E8YP20kNZpgvA4xaexAYaHCX42tvXVeTYCITUGUV8tnKlS_VxrYUDXkF1N1WkqSwfp2HxYiNRmurUBcQt3wxI5HCy90mNR5KrRdPIS16hzBr9f6b0dqadWaJS5MtvY" />
+            </div>
+        </section>
+        <!-- Company Story & History -->
+        <section class="py-xxl bg-background">
+            <div class="container mx-auto px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+                    <div class="lg:col-span-5">
+                        <div class="relative rounded-xl overflow-hidden shadow-xl aspect-square">
+                            <img alt="" class="w-full h-full object-cover"
+                                data-alt="modern glass office building reflecting the city sky at sunset with warm corporate lighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4zqgOzAxr7F-Pl2U2OYxyOgbcTMoTQnsVNARqq-Fxsgwk146l-81obmDtrFEkWCw0gmWNFiwjI6_XUbvQzAd1HzAueW8Z0RBmGyIUYBiY0UwlMsfrEXiM7YFejMXQBc6pV2ENYZAzNvh2ly6I7L5Bk8YA8EN7378zWS2MjTmpGE7YOjJIW4Zf7Pbv4IhRi_dFnKOrS-zJ_G_g1yUzxONfSSkMJO8KOPw6FmslkT6q-YvmMC4vZ-tMbRhF2kXBLgBy9lwJDu1DobO2" />
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <h2 class="font-h2 text-h2 text-primary-container mb-md">A Legacy of Innovation</h2>
+                        <div class="space-y-md text-on-surface-variant font-body-md">
+                            <p>What started as a boutique firm in London's financial district has evolved into a global
+                                powerhouse in the brokerage industry. For over a decade, Skylink Markets has been at the
+                                forefront of digital transformation in financial services.</p>
+                            <p>We recognized early on that the gap between professional institutions and individual
+                                retail traders was widening. Our journey began with the mission to bridge that gap,
+                                providing retail traders with the same execution speeds, liquidity depth, and analytical
+                                tools used by the world's leading hedge funds.</p>
+                        </div>
+                        <!-- Timeline Bento -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-md mt-xl">
+                            <div class="p-lg rounded-xl glass-card border-l-4 border-amber-500">
+                                <div class="font-display text-h3 text-primary-container mb-xs">2012</div>
+                                <div class="font-label-caps text-label-caps text-secondary">FOUNDATION</div>
+                            </div>
+                            <div class="p-lg rounded-xl glass-card border-l-4 border-amber-500">
+                                <div class="font-display text-h3 text-primary-container mb-xs">2016</div>
+                                <div class="font-label-caps text-label-caps text-secondary">GLOBAL EXPANSION</div>
+                            </div>
+                            <div class="p-lg rounded-xl glass-card border-l-4 border-amber-500">
+                                <div class="font-display text-h3 text-primary-container mb-xs">2023</div>
+                                <div class="font-label-caps text-label-caps text-secondary">AI INTEGRATION</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mission, Vision, Values -->
+        <section class="py-xxl bg-surface-container-low relative">
+            <div class="container mx-auto px-8">
+                <div class="text-center mb-xl">
+                    <h2 class="font-h2 text-h2 text-primary-container mb-sm">The Pillars of Skylink</h2>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Our guiding principles define how
+                        we build products, treat our clients, and envision the future of finance.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <!-- Mission -->
+                    <div
+                        class="p-xl rounded-xl glass-card border-t-4 border-primary-container flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary-container text-white flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary-container mb-md">Our Mission</h3>
+                        <p class="font-body-md text-on-surface-variant">To democratize financial markets through
+                            superior technology, education, and unwavering transparency.</p>
+                    </div>
+                    <!-- Vision -->
+                    <div
+                        class="p-xl rounded-xl glass-card border-t-4 border-amber-500 flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-amber-500 text-primary-container flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">visibility</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary-container mb-md">Our Vision</h3>
+                        <p class="font-body-md text-on-surface-variant">To be the world’s most trusted partner for
+                            traders, setting the global gold standard for brokerage services.</p>
+                    </div>
+                    <!-- Values -->
+                    <div
+                        class="p-xl rounded-xl glass-card border-t-4 border-secondary flex flex-col items-center text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-secondary text-white flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">verified_user</span>
+                        </div>
+                        <h3 class="font-h3 text-h3 text-primary-container mb-md">Core Values</h3>
+                        <p class="font-body-md text-on-surface-variant">Integrity, Innovation, and Client-First thinking
+                            in every line of code we write and every trade we execute.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Leadership Section -->
+        <section class="py-xxl bg-background">
+            <div class="container mx-auto px-8">
+                <div class="flex flex-col lg:flex-row justify-between items-end mb-xl">
+                    <div class="max-w-2xl">
+                        <h2 class="font-h2 text-h2 text-primary-container mb-sm">Driven by Experience</h2>
+                        <p class="font-body-md text-on-surface-variant">Our leadership team brings together decades of
+                            experience from major investment banks and fintech innovators.</p>
+                    </div>
+                    <button
+                        class="mt-lg lg:mt-0 font-label-caps text-label-caps text-secondary flex items-center gap-2 hover:gap-4 transition-all">
+                        VIEW ALL LEADERSHIP <span class="material-symbols-outlined">trending_flat</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+                    <!-- Leader 1 -->
+                    <div class="group">
+                        <div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-md">
+                            <img alt=""
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="professional portrait of a confident man in a dark suit, clean corporate background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1GnlnKJ3Gl7ylDha58MEo80byLit_az_puwxkeJyS187QCKbqlSJoAvbOYWY0fazKPcldcPhl5CsSdxAyqd-FD6EDJTnxlVArxubvrIZ301KuG77e5YW5qqdiZICOo6nTLbq40m0qE-VEIy0eKqhsJcHgnsxAqGpo9kUebezQPH-bbWyU8p9x7Cfddb3cd1F8dj1kIRsl4V9LfNo5zQ2DvlE_37xXU0oOBjiyy9v2vnkJyQwsDL-_rpEmJDszcL0gdQXQgNAC4frN" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
+                                <p class="text-white text-body-sm italic">"Precision in execution is the only metric
+                                    that matters."</p>
+                            </div>
+                        </div>
+                        <h4 class="font-h3 text-h3 text-primary-container">Marcus Thorne</h4>
+                        <p class="font-label-caps text-label-caps text-secondary">CHIEF EXECUTIVE OFFICER</p>
+                    </div>
+                    <!-- Leader 2 -->
+                    <div class="group">
+                        <div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-md">
+                            <img alt=""
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="professional portrait of a woman executive in a sleek modern office setting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk_Echi44RgzZzIjacH2OmbFe__WolLN52RpGB0x-GmM8h3009_eg7R62fXJ7_uI4jWBoOSqBP0MlQ46oWq2Ghqv9--hh9gCpOM5jJ62MfOa-px3YVijzwcoHdSXwIWr5pMhwKKhCwfzs9yHPe7bBoM9nixpStGI4jcAE9KQqXoY-mllbGBX1HRPsVhNDvl0cjqM46-BdKW1DK7uNgqKblh4doNOxoLNUxmh8gwAWOMgA5nCuJEjRURwm5TAH6qfmhy9BvNiQ0-LBJ" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
+                                <p class="text-white text-body-sm italic">"Technology should empower, not complicate the
+                                    trading experience."</p>
+                            </div>
+                        </div>
+                        <h4 class="font-h3 text-h3 text-primary-container">Sarah Chen</h4>
+                        <p class="font-label-caps text-label-caps text-secondary">CHIEF TECHNOLOGY OFFICER</p>
+                    </div>
+                    <!-- Leader 3 -->
+                    <div class="group">
+                        <div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-md">
+                            <img alt=""
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="professional portrait of an experienced man in a light blue shirt, blurred corporate office background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpiNYbdLvUcZmNNE5wKdLd-3kTpdqnrfHB5lqxDNVsxtWcMVeQSUsEFBd5e8lXCTNrX7aDhvuuo1zh7JR2pER1UatnBk5BAG-DfJQYgd5g3j4d5gYVb9Cl3ywyV-fOkrrReSspGiuXadvDogH4B06N7JwGYDSFyGA8CLQN6vjfpLV-IhJA37F-eLBMhEfKD_BTWhL7wyOgZJdW8DvLvrkcepXNmFeWosoL-HqLPOx84ECvk_grSdzvyycXkXslpkXF4aVJeAbvPIlc" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
+                                <p class="text-white text-body-sm italic">"Regulatory integrity is our strongest
+                                    foundation."</p>
+                            </div>
+                        </div>
+                        <h4 class="font-h3 text-h3 text-primary-container">David Miller</h4>
+                        <p class="font-label-caps text-label-caps text-secondary">COMPLIANCE DIRECTOR</p>
+                    </div>
+                    <!-- Leader 4 -->
+                    <div class="group">
+                        <div class="relative aspect-[3/4] rounded-xl overflow-hidden mb-md">
+                            <img alt=""
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="professional portrait of a younger woman leader, confident and approachable style"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXfWc7iWui2gbJiXBH9R8bEnJfVHg6O4StTg7AkWUATl8yGQOum65iDI74eDila1kZhyEffutWTpbogyNekz5aop9t8YHq2sa01U_lOQ9vTd321wfUlRJwBlSVKHXn-jPrvCcm6P9MifaSHH43uALAwpthXaEUATgTKnInQxrI8aVdC2T8olqKZ3SjNWfx90AL3FaGPkb9L6R_EyRrmmKnGiQ4dnuaGDIpgoJThYmzuVVC3VW-lhlpflqnHhdlDAD9WAiooB15ASpr" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
+                                <p class="text-white text-body-sm italic">"We grow when our clients succeed."</p>
+                            </div>
+                        </div>
+                        <h4 class="font-h3 text-h3 text-primary-container">Elena Rossi</h4>
+                        <p class="font-label-caps text-label-caps text-secondary">HEAD OF CLIENT RELATIONS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Global Presence -->
+        <section class="py-xxl bg-primary-container text-white">
+            <div class="container mx-auto px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+                    <div>
+                        <h2 class="font-h2 text-h2 mb-md">A Global Footprint</h2>
+                        <p class="font-body-md text-on-primary-container mb-xl">With offices in major financial hubs, we
+                            provide 24/5 localized support and market insights tailored to your region. We are regulated
+                            across multiple jurisdictions to ensure your capital is always protected.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-lg">
+                            <div class="flex items-start gap-md">
+                                <span class="material-symbols-outlined text-amber-500">location_on</span>
+                                <div>
+                                    <h4 class="font-h3 text-numeric-data mb-xs">London</h4>
+                                    <p class="text-body-sm text-on-primary-container">One Canada Square, Canary Wharf
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <span class="material-symbols-outlined text-amber-500">location_on</span>
+                                <div>
+                                    <h4 class="font-h3 text-numeric-data mb-xs">Dubai</h4>
+                                    <p class="text-body-sm text-on-primary-container">DIFC Innovation Hub</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <span class="material-symbols-outlined text-amber-500">location_on</span>
+                                <div>
+                                    <h4 class="font-h3 text-numeric-data mb-xs">Singapore</h4>
+                                    <p class="text-body-sm text-on-primary-container">Marina Bay Financial Centre</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-md">
+                                <span class="material-symbols-outlined text-amber-500">location_on</span>
+                                <div>
+                                    <h4 class="font-h3 text-numeric-data mb-xs">Sydney</h4>
+                                    <p class="text-body-sm text-on-primary-container">Barangaroo International Tower</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-[400px] lg:h-[500px] bg-slate-900 rounded-2xl border border-white/10 overflow-hidden">
+                        <img alt="Global Locations" class="w-full h-full object-cover opacity-60" data-location="London"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClLFF0pXc9JCzf6aGy5knBkL36jZTFrkh5Qnoage9TNmMz7Yg56amqtI2RpjRvSCSGWhTS6aZsyDMHoiYUervcm8UYTQxpCb-CMzHr3Cqa-M4hyr3ygOLA1f2cdEDHa9y78Rci70cqYEWnuxVozgo1lUUVB5YFdfq7EC52KomhKbZ8PZtBVbij2sMCP1ZlqRilGbJmWamRXxZsUJ5JGEUkjLGt4NUq9OwtUoYZxnj0UgioChjdmfpbqvssdnyVfTfvrCBdZXDyinLm" />
+                        <div
+                            class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,6,21,0.8)_100%)]">
+                        </div>
+                        <!-- Decorative points on map -->
+                        <div
+                            class="absolute top-1/4 left-1/3 w-3 h-3 bg-amber-500 rounded-full animate-pulse shadow-[0_0_10px_#f59e0b]">
+                        </div>
+                        <div
+                            class="absolute top-1/2 right-1/4 w-3 h-3 bg-amber-500 rounded-full animate-pulse shadow-[0_0_10px_#f59e0b]">
+                        </div>
+                        <div
+                            class="absolute top-1/3 right-1/2 w-3 h-3 bg-amber-500 rounded-full animate-pulse shadow-[0_0_10px_#f59e0b]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Traders Trust Skylink -->
+        <section class="py-xxl bg-background overflow-hidden">
+            <div class="container mx-auto px-8">
+                <h2 class="font-h2 text-h2 text-primary-container text-center mb-xl">Why Institutional Traders Choose Us
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+                    <!-- Feature 1 -->
+                    <div
+                        class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-colors">
+                        <span class="material-symbols-outlined text-secondary mb-md"
+                            style="font-variation-settings: 'opsz' 48;">speed</span>
+                        <h4 class="font-h3 text-h3 text-primary-container mb-sm">Ultra-Low Latency</h4>
+                        <p class="font-body-sm text-on-surface-variant">Execution speeds under 12ms via our Equinix NY4
+                            and LD4 data centers.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div
+                        class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-colors">
+                        <span class="material-symbols-outlined text-secondary mb-md"
+                            style="font-variation-settings: 'opsz' 48;">account_balance</span>
+                        <h4 class="font-h3 text-h3 text-primary-container mb-sm">Tier-1 Liquidity</h4>
+                        <p class="font-body-sm text-on-surface-variant">Direct access to multi-asset liquidity from
+                            top-tier global banks.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div
+                        class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-colors">
+                        <span class="material-symbols-outlined text-secondary mb-md"
+                            style="font-variation-settings: 'opsz' 48;">shield</span>
+                        <h4 class="font-h3 text-h3 text-primary-container mb-sm">Fully Regulated</h4>
+                        <p class="font-body-sm text-on-surface-variant">Compliance with ASIC, FCA, and CySEC regulatory
+                            frameworks.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div
+                        class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl group hover:border-secondary transition-colors">
+                        <span class="material-symbols-outlined text-secondary mb-md"
+                            style="font-variation-settings: 'opsz' 48;">support_agent</span>
+                        <h4 class="font-h3 text-h3 text-primary-container mb-sm">Elite Support</h4>
+                        <p class="font-body-sm text-on-surface-variant">Personal relationship managers for premium
+                            account holders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-xl mb-xxl container mx-auto px-8">
+            <div
+                class="bg-primary-container rounded-xxl p-xl md:p-xxl relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
+                <div class="relative z-10 text-center md:text-left mb-xl md:mb-0">
+                    <h2 class="font-display text-h1 text-white mb-md">Ready to experience the future?</h2>
+                    <p class="font-body-lg text-on-primary-container max-w-xl">Join over 100,000 professional traders
+                        who have already made the switch to Skylink Markets.</p>
+                </div>
+                <div class="relative z-10 flex flex-col sm:flex-row gap-md">
+                    <button
+                        class="bg-amber-500 text-primary-container px-lg py-md rounded-lg font-bold text-body-md hover:bg-amber-400 transition-all">Start
+                        Trading Now</button>
+                    <button
+                        class="border border-white/20 text-white px-lg py-md rounded-lg font-bold text-body-md hover:bg-white/10 transition-all">Contact
+                        Sales</button>
+                </div>
+                <!-- Abstract BG Elements -->
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"></div>
+                <div class="absolute -left-20 -top-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 w-full pt-16 pb-8 border-t border-slate-800">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 px-8 max-w-7xl mx-auto">
+            <div class="lg:col-span-2">
+                <div class="text-xl font-bold text-white mb-4">Skylink Markets</div>
+                <p class="font-manrope text-xs leading-relaxed text-slate-400 max-w-xs">Empowering the world's most
+                    ambitious traders with advanced technology and unparalleled liquidity access.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4 font-label-caps text-label-caps">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Trading Platforms</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Market Analysis</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Partnership Programs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4 font-label-caps text-label-caps">Trading Products</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Forex</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Commodities</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Indices &amp; Stocks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4 font-label-caps text-label-caps">Legal Links</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Terms of Service</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Risk Disclosure</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-4 font-label-caps text-label-caps">Contact</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Support Center</a></li>
+                    <li><a class="text-slate-400 hover:text-amber-500 transition-all duration-300 hover:translate-x-1 inline-block text-xs"
+                            href="#">Corporate Office</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="px-8 max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800">
+            <p class="font-manrope text-xs leading-relaxed text-slate-400 text-center">© 2024 Skylink Markets. All
+                rights reserved. High-risk investment warning: Trading involves significant risk.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#96b9ff",
+                        "tertiary-container": "#2b1d00",
+                        "tertiary": "#0b0600",
+                        "on-surface": "#1b1b1e",
+                        "surface-bright": "#fbf9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e5",
+                        "on-secondary-container": "#204886",
+                        "on-secondary-fixed": "#001a40",
+                        "outline-variant": "#c4c6ce",
+                        "on-background": "#1b1b1e",
+                        "primary": "#000615",
+                        "surface-container-high": "#e9e7ea",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#b5c7ea",
+                        "on-tertiary-container": "#ad7f00",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-surface-variant": "#44474d",
+                        "surface-tint": "#4d5f7d",
+                        "primary-container": "#0b1f3a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbd9dc",
+                        "tertiary-fixed": "#ffdea3",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#395e9d",
+                        "on-tertiary-fixed": "#261900",
+                        "surface": "#fbf9fb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b5c7ea",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-secondary-fixed-variant": "#1d4684",
+                        "outline": "#75777e",
+                        "error": "#ba1a1a",
+                        "surface-container": "#efedf0",
+                        "background": "#fbf9fb",
+                        "surface-container-highest": "#e4e2e5",
+                        "surface-container-low": "#f5f3f6",
+                        "on-primary-fixed": "#071c36",
+                        "on-primary-container": "#7587a7",
+                        "tertiary-fixed-dim": "#fdbc13",
+                        "inverse-surface": "#303033",
+                        "on-primary-fixed-variant": "#364764",
+                        "inverse-on-surface": "#f2f0f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "xxl": "64px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "container-max": "1440px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "sm": "8px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "numeric-data": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "numeric-data": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 20px 25px -5px rgba(11, 31, 58, 0.04);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #0b1f3a, #000615);
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body-md text-on-background">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10 shadow-xl shadow-slate-950/20">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <div class="text-2xl font-bold tracking-tight text-white font-h1">Skylink Markets</div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="index.html">Home</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="about.html">About</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="market.html">Markets</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="account.html">Accounts</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="platform.html">Platform</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="security.html">Security</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="faq.html">FAQ</a>
+                <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                    href="contact.html">Contact</a>
+            </nav>
+            <button
+                class="bg-amber-500 text-slate-900 px-6 py-2 rounded font-bold transition-transform scale-95 active:scale-90">Open
+                Account</button>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Section 1: Hero -->
+        <section class="hero-gradient relative py-xxl overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <img class="w-full h-full object-cover"
+                    data-alt="abstract geometric gradient lines in deep navy and amber creating a professional technical pattern"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPNYH56Gf_isXyDLCH159Ye4RTubGxPzF7j_dHAq9c6qo08jRJ65ZwSZ8RZtAAPq5QSd1QRyXh6pqLAWKhB-e7qSJoAVC8Azc3yWqGG0H_m16N7ona7f1RaJfvCld8HHbpL3r5utxqqf26wXNU1jzc4J6NVDWRtFV2PiRtmpvwfwrpJjiaZSb0zwOFlOnvsM5BGceOBfzkKuf2S-Eh_PzFFjW6cggU6qvitJ2AHAzRnzzyhteVoOxwWTBqGi7YnEKdS-bbErdaFldp" />
+            </div>
+            <div class="relative max-w-7xl mx-auto px-8 py-20 text-center">
+                <span
+                    class="font-label-caps text-label-caps text-amber-500 uppercase tracking-widest mb-4 block">Connect
+                    with Confidence</span>
+                <h1 class="font-display text-display text-white mb-6">Get in Touch with Our Experts</h1>
+                <p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto opacity-80">
+                    Experience institutional-grade support and personalized trading guidance. Our global team is
+                    available 24/5 to assist with your market needs.
+                </p>
+            </div>
+        </section>
+        <!-- Section 2 & 4: Contact Form & Support Channels (Bento Layout) -->
+        <section class="max-w-7xl mx-auto px-8 -mt-16 relative z-10 mb-xxl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+                <!-- Support Channels Sidebar -->
+                <div class="lg:col-span-4 space-y-lg">
+                    <div class="glass-card p-lg rounded-xl">
+                        <div class="flex items-center gap-md mb-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-amber-500">
+                                <span class="material-symbols-outlined">forum</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3">Live Support</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Instant response</p>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md mb-lg text-on-surface-variant">Available Monday through
+                            Friday for immediate assistance with your trading account.</p>
+                        <button
+                            class="w-full py-3 bg-secondary text-white rounded-lg font-bold hover:bg-on-secondary-container transition-all">Start
+                            Chat Now</button>
+                    </div>
+                    <div class="glass-card p-lg rounded-xl">
+                        <div class="flex items-center gap-md mb-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-amber-500">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3">Email Support</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">24h turnaround</p>
+                            </div>
+                        </div>
+                        <a class="font-numeric-data text-numeric-data text-secondary block mb-md"
+                            href="mailto:support@skylinkmarkets.com">support@skylinkmarkets.com</a>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">For detailed inquiries regarding
+                            security, accounts, or corporate services.</p>
+                    </div>
+                    <div class="glass-card p-lg rounded-xl">
+                        <div class="flex items-center gap-md mb-md">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-amber-500">
+                                <span class="material-symbols-outlined">call</span>
+                            </div>
+                            <div>
+                                <h3 class="font-h3 text-h3">Global Phone</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant">Priority desk</p>
+                            </div>
+                        </div>
+                        <p class="font-numeric-data text-numeric-data text-secondary mb-xs">+1 (800) SKY-LINK</p>
+                        <p class="font-numeric-data text-numeric-data text-secondary">+44 20 7946 0000</p>
+                    </div>
+                </div>
+                <!-- Interactive Contact Form -->
+                <div class="lg:col-span-8">
+                    <div class="glass-card p-xl rounded-xl">
+                        <h2 class="font-h2 text-h2 mb-md text-primary">Direct Inquiry</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-xl">Fill out the form below and
+                            an account manager will contact you within one business hour.</p>
+                        <form class="space-y-lg">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                                <div>
+                                    <label
+                                        class="font-label-caps text-label-caps text-on-surface-variant mb-xs block">Full
+                                        Name</label>
+                                    <input
+                                        class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
+                                        placeholder="John Doe" type="text" />
+                                </div>
+                                <div>
+                                    <label
+                                        class="font-label-caps text-label-caps text-on-surface-variant mb-xs block">Email
+                                        Address</label>
+                                    <input
+                                        class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
+                                        placeholder="john@example.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                                <div>
+                                    <label
+                                        class="font-label-caps text-label-caps text-on-surface-variant mb-xs block">Account
+                                        Type</label>
+                                    <select
+                                        class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all">
+                                        <option>Retail Trader</option>
+                                        <option>Professional Institutional</option>
+                                        <option>Corporate Partner</option>
+                                        <option>Wealth Management</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label
+                                        class="font-label-caps text-label-caps text-on-surface-variant mb-xs block">Department</label>
+                                    <select
+                                        class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all">
+                                        <option>Technical Support</option>
+                                        <option>Account Operations</option>
+                                        <option>Compliance &amp; Legal</option>
+                                        <option>Marketing &amp; Media</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="font-label-caps text-label-caps text-on-surface-variant mb-xs block">Your
+                                    Message</label>
+                                <textarea
+                                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-md focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
+                                    placeholder="How can our experts help you today?" rows="4"></textarea>
+                            </div>
+                            <div class="flex items-center gap-sm">
+                                <input class="rounded border-outline-variant text-secondary focus:ring-secondary"
+                                    type="checkbox" />
+                                <label class="font-body-sm text-body-sm text-on-surface-variant">I agree to the privacy
+                                    policy and data processing terms.</label>
+                            </div>
+                            <button
+                                class="bg-primary text-white font-h3 px-xl py-4 rounded-lg hover:bg-slate-800 transition-all shadow-lg"
+                                type="submit">Send Secure Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3: Global Office Locations -->
+        <section class="bg-surface-container-low py-xxl">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="mb-xl">
+                    <h2 class="font-h1 text-h1 text-primary">Institutional Presence</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mt-md">Operating in key financial hubs
+                        across the globe to ensure localized expertise.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <!-- Office 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl mb-md">
+                            <img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="vibrant cityscape of New York Manhattan skyline with skyscrapers and morning sunlight"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIUxUsrElJWmzPkkBAo3EFTSBgbzfbNEig-D9vAYT_iZIYjdfdNE4z8DlFpeMjZOFH1GvHNem-RFY-jbDAEctLGzwn33Vio0Q9M0LVe_S_5ybBN9n2Zg-NPhN1i6mzXfH5qdMd9DWgUASt1g5DgQzs4--svpuyUmP1cWuXEbqW5h923d4vBUJfunBNh2VH6KXE0IESY0DFBZGOvr45BbUl1wI23yNO2q1K8AznWoBFoWv_T2wvOFhvGg6IqE0iVWtFvGSoDXSgFO0U" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-label-caps text-label-caps text-amber-500">Global HQ</p>
+                                <h3 class="font-h2 text-h2">New York</h3>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant">1200 Avenue of the Americas, Suite
+                            400<br />New York, NY 10036</p>
+                    </div>
+                    <!-- Office 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl mb-md">
+                            <img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="London skyline with the Shard and Tower Bridge during sunset reflecting in the Thames river"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIZzTsyJj87-t5nMMUGjOgQXMxZcGIEMMWCS6emNOj17mB29odN3IAQA7hLcY4rzaz5GQrbpNe6WynM0TkpLj1sLtlOXXIGlBwKrPs1rxocgcXmB4DcmAmhHb95JWnWhRu6RTPoGcuYaOPfzFPi74IWuqBy6gqXMLcWYNbBQJEkjv4MIgJ3HHA_bVrVFhkT5qdXNcBsRZKvqdBDa6SIXJgaPA-P325UwriMIBCK_itZXx1OnSl6alvYfgr3m7i22pYMG_6P4lPsj1-" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-label-caps text-label-caps text-amber-500">European Hub</p>
+                                <h3 class="font-h2 text-h2">London</h3>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant">30 St Mary Axe (The
+                            Gherkin)<br />London EC3A 8BF, United Kingdom</p>
+                    </div>
+                    <!-- Office 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl mb-md">
+                            <img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Dubai financial district modern architecture with futuristic glass skyscrapers at dusk"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG5zjAPX6xtSAhkqWQ_NJ4Is7lKivuT8crWG0BXAouB54IILx2Ppq1vjBblEHu8TaSuALr4cnR4UZHX5hU8_ev3pg8QGX8fB7dWq3N-kDYYxwZxhv4JgjyaZN4fTU3FqJ1ajh4jXvIAeih5quN4j7HZRnNZVEuIlM4WA5_K0hPlQVBiWpbS_pd5jIkXeALuARbh-b5fw0rI2XWaG2cq75QkqmB5nm2YDr9-wAi_2fWuw3IHWLiJ65DAQ6Kfn583VdzMrgAxvBdSjdN" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <p class="font-label-caps text-label-caps text-amber-500">MENA Hub</p>
+                                <h3 class="font-h2 text-h2">Dubai</h3>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-body-md text-on-surface-variant">DIFC, Gate Village 10<br />Dubai,
+                            United Arab Emirates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Map Integration -->
+        <section class="h-[450px] relative overflow-hidden">
+            <div class="absolute inset-0 bg-slate-200">
+                <img class="w-full h-full object-cover"
+                    data-alt="minimal monochromatic world map with glowing dots on major financial cities"
+                    data-location="New York"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUV5zCAgcpg7nLA-cn9kE17GNLMCHPjdCWQM5EfL6T1M1ezcVLqjNDEsjQVAKm4IA5dSDaVGyzFAmjNswcEaMeHgEyuW76mPJRIAdJ-oqOl_WQyX-E-k2gaAf3CKrCvqL13YYYi0IOgnuGo_tuuQmOHJZspFZAhX-CF1m0PGAR44_JfgbuWg0ASIHGkBXfPlO49rHRhVb5VwNmuajY5Sa4Pw9qsBgWmW6BgX1BZvkEVkJnlvCCLFDoFyjCSz56oxKpQSYhfVvhgshj" />
+            </div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                <div class="w-6 h-6 bg-amber-500 rounded-full animate-ping opacity-75"></div>
+                <div class="absolute inset-0 w-6 h-6 bg-amber-500 rounded-full border-4 border-white"></div>
+            </div>
+            <div class="absolute bottom-lg right-lg glass-card p-md rounded-lg max-w-xs">
+                <h4 class="font-h3 text-h3 mb-xs">Find us near you</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-md">We host regular networking events and
+                    educational seminars at all our global locations.</p>
+                <button class="flex items-center gap-xs text-secondary font-bold">
+                    View Interactive Map
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 w-full pt-16 pb-8 border-t border-slate-800">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 px-8 max-w-7xl mx-auto">
+            <div class="lg:col-span-2">
+                <div class="text-xl font-bold text-white mb-4">Skylink Markets</div>
+                <p class="font-manrope text-xs leading-relaxed text-slate-400 max-w-sm">
+                    Empowering traders with cutting-edge technology and institutional liquidty since 2012. Join the
+                    future of algorithmic and discretionary trading.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Company Overview</a></li>
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Trading Products</a></li>
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Platform Features</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Regulatory Information</a></li>
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="font-manrope text-xs text-slate-400 hover:text-amber-500 hover:translate-x-1 transition-transform inline-block"
+                            href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="text-white font-semibold mb-4">Subscribe to Market Insights</h4>
+                <div class="flex gap-2">
+                    <input class="bg-slate-800 border-none rounded p-2 text-xs text-white w-full" placeholder="Email"
+                        type="email" />
+                    <button class="bg-amber-500 text-slate-900 px-4 py-2 rounded text-xs font-bold">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-slate-800 text-center">
+            <p class="font-manrope text-xs leading-relaxed text-slate-400">
+                © 2024 Skylink Markets. All rights reserved. High-risk investment warning: Trading involves significant
+                risk. Leverage can work against you. Please ensure you understand the risks involved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

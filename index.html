@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Skylink Markets | Trade Global Markets with Confidence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#96b9ff",
+                        "tertiary-container": "#2b1d00",
+                        "tertiary": "#0b0600",
+                        "on-surface": "#1b1b1e",
+                        "surface-bright": "#fbf9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e4e2e5",
+                        "on-secondary-container": "#204886",
+                        "on-secondary-fixed": "#001a40",
+                        "outline-variant": "#c4c6ce",
+                        "on-background": "#1b1b1e",
+                        "primary": "#000615",
+                        "surface-container-high": "#e9e7ea",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#b5c7ea",
+                        "on-tertiary-container": "#ad7f00",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-surface-variant": "#44474d",
+                        "surface-tint": "#4d5f7d",
+                        "primary-container": "#0b1f3a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbd9dc",
+                        "tertiary-fixed": "#ffdea3",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#395e9d",
+                        "on-tertiary-fixed": "#261900",
+                        "surface": "#fbf9fb",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b5c7ea",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-secondary-fixed-variant": "#1d4684",
+                        "outline": "#75777e",
+                        "error": "#ba1a1a",
+                        "surface-container": "#efedf0",
+                        "background": "#fbf9fb",
+                        "surface-container-highest": "#e4e2e5",
+                        "surface-container-low": "#f5f3f6",
+                        "on-primary-fixed": "#071c36",
+                        "on-primary-container": "#7587a7",
+                        "tertiary-fixed-dim": "#fdbc13",
+                        "inverse-surface": "#303033",
+                        "on-primary-fixed-variant": "#364764",
+                        "inverse-on-surface": "#f2f0f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "xxl": "64px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "container-max": "1440px",
+                        "lg": "24px",
+                        "xl": "40px",
+                        "sm": "8px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "numeric-data": ["Manrope"],
+                        "h1": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "h2": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "h3": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "numeric-data": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "h1": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .wealth-gold-gradient {
+            background: linear-gradient(135deg, #fdbc13 0%, #ad7f00 100%);
+        }
+
+        .navy-gradient {
+            background: linear-gradient(180deg, #000615 0%, #0b1f3a 100%);
+        }
+
+        .inner-glow {
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-slate-900/80 backdrop-blur-md dark:bg-slate-950/80 border-b border-white/10 shadow-xl shadow-slate-950/20 flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+        <div class="text-2xl font-bold tracking-tight text-white font-display">Skylink Markets</div>
+        <div class="hidden lg:flex items-center space-x-8">
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="index.html">Home</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="about.html">About</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="market.html">Markets</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="account.html">Accounts</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="platform.html">Platform</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="security.html">Security</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="faq.html">FAQ</a>
+            <a class="font-manrope text-sm font-medium tracking-wide text-slate-200 hover:text-white transition-colors"
+                href="contact.html">Contact</a>
+        </div>
+        <button
+            class="wealth-gold-gradient text-primary px-6 py-2.5 rounded-lg font-label-caps text-label-caps inner-glow scale-95 active:scale-90 transition-transform">
+            Open Account
+        </button>
+    </nav>
+    <!-- Section 1: Hero -->
+    <section class="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-40" id="home">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+            <video src="/bg.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+
+            <!-- <div class="absolute inset-0 opacity-30 z-20 pointer-events-none">
+                <div
+                    class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container blur-[160px] rounded-full -mr-96 -mt-96">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary-fixed-dim blur-[140px] rounded-full -ml-48 -mb-48">
+                </div>
+            </div> -->
+        </div>
+
+        <div class="relative z-30 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div class="animate-fade-in-up">
+                <h1 class="font-display text-display text-white mb-6 leading-tight">
+                    Trade Global Markets with <span class="text-tertiary-fixed-dim">Confidence</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
+                    Experience institutional-grade liquidity, ultra-low latency execution, and 24/7 expert support with
+                    the world's most trusted broker.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="wealth-gold-gradient text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps inner-glow hover:brightness-110 transition-all shadow-lg shadow-tertiary-container/20">
+                        Open Live Account
+                    </button>
+                    <button
+                        class="border border-white/30 text-white px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-white/10 backdrop-blur-sm transition-all">
+                        Try Demo Account
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative hidden lg:flex justify-center">
+                <div class="aspect-square w-full max-w-md relative flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border border-white/10 animate-ping"></div>
+                    <div class="absolute inset-4 rounded-full border border-white/5 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 2: Trust Bar -->
+    <!-- <div class="relative z-20 -mt-10 px-8">
+        <div
+            class="max-w-5xl mx-auto glass-card rounded-2xl p-8 flex flex-wrap justify-between items-center gap-8 shadow-2xl">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-tertiary-fixed-dim"
+                    data-icon="verified_user">verified_user</span>
+                <span class="font-label-caps text-label-caps text-white">UK REGISTERED</span>
+            </div>
+            <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="bolt">bolt</span>
+                <span class="font-label-caps text-label-caps text-white">MT5 POWERED</span>
+            </div>
+            <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="lock">lock</span>
+                <span class="font-label-caps text-label-caps text-white">SECURE ENCRYPTION</span>
+            </div>
+            <div class="h-6 w-px bg-white/10 hidden md:block"></div>
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="monitoring">monitoring</span>
+                <span class="font-label-caps text-label-caps text-white">LOW SPREADS</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- Section 3: About Preview (Bento Grid) -->
+    <section class="py-xxl px-8 max-w-7xl mx-auto" id="about">
+        <div class="text-center mb-16">
+            <span
+                class="font-label-caps text-label-caps text-secondary tracking-widest block mb-4 uppercase">Institutional
+                Excellence</span>
+            <h2 class="font-h1 text-h1 text-primary">Redefining the Trading Standard</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[600px]">
+            <!-- Large Item -->
+            <div
+                class="md:col-span-2 md:row-span-2 bg-white rounded-xl border border-outline-variant p-lg flex flex-col justify-between shadow-sm group">
+                <div>
+                    <h3 class="font-h2 text-h2 text-primary mb-4">The Skylink Edge</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">We provide a seamless bridge
+                        between traditional markets and digital assets, ensuring that every trade is executed with
+                        precision and complete transparency.</p>
+                </div>
+                <div class="relative overflow-hidden rounded-lg h-64 mt-8">
+                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="Sophisticated modern trading floor with multiple high-resolution monitors and clean minimalist interior design"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtTA22U_r-Nz-9fuxiB4vdpRxaMKzHzQwH5u6MhCwkE1nvywcrxBKKEgiRiOtxQIEWk5gtsfroHzxDNlDxPfxT8iGCgQK2NZ4_ndnIs1-MypDuVZP6pmq-AYSf5MBH4J0PB8C8cEtUbrT5sTGJ8u0W1NFS0xjn1KWNzl7F6kV3A7fEAgoWhzQVAL6wk6mVpWA_qPzGyZCZB9O5q-z2pZaMbci2Hz9JtrfVsEO5KzIs5Ji-k2epzDyGEiJfxPMAidgSdu7OcBT4lSwO" />
+                </div>
+            </div>
+            <!-- Small Item 1 -->
+            <div
+                class="bg-primary text-white rounded-xl p-lg flex flex-col items-center justify-center text-center shadow-lg">
+                <div class="text-tertiary-fixed-dim mb-4">
+                    <span class="material-symbols-outlined text-4xl" data-icon="speed">speed</span>
+                </div>
+                <h4 class="font-h3 text-h3 mb-2">0.01ms</h4>
+                <p class="font-body-sm text-body-sm opacity-70">Average Execution Speed</p>
+            </div>
+            <!-- Small Item 2 -->
+            <div
+                class="bg-secondary-container/10 border border-secondary-container/20 rounded-xl p-lg flex flex-col justify-center shadow-sm">
+                <span class="material-symbols-outlined text-secondary text-3xl mb-4"
+                    data-icon="account_balance_wallet">account_balance_wallet</span>
+                <h4 class="font-h3 text-h3 text-primary mb-2">Instant Funding</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Over 20+ methods including localized bank
+                    transfers.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Section 4: Trading Instruments -->
+    <section class="py-xxl bg-surface-container-low px-8" id="markets">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="font-label-caps text-label-caps text-secondary block mb-4 uppercase">Global
+                        Access</span>
+                    <h2 class="font-h1 text-h1 text-primary">Trade the World Across 500+ Assets</h2>
+                </div>
+                <button
+                    class="text-secondary font-label-caps text-label-caps flex items-center gap-2 hover:gap-3 transition-all">
+                    VIEW ALL INSTRUMENTS <span class="material-symbols-outlined"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- Forex Card -->
+                <div
+                    class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant hover:border-tertiary-fixed-dim transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-tertiary-fixed-dim transition-colors">
+                        <span class="material-symbols-outlined" data-icon="currency_exchange">currency_exchange</span>
+                    </div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Forex</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Trade 70+ pairs with raw spreads from
+                        0.0 pips.</p>
+                </div>
+                <!-- Commodities Card -->
+                <div
+                    class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant hover:border-tertiary-fixed-dim transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-tertiary-fixed-dim transition-colors">
+                        <span class="material-symbols-outlined" data-icon="gold">grid_goldenratio</span>
+                    </div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Commodities</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Gold, Silver, Oil and more with
+                        leverage up to 1:500.</p>
+                </div>
+                <!-- Indices Card -->
+                <div
+                    class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant hover:border-tertiary-fixed-dim transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-tertiary-fixed-dim transition-colors">
+                        <span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+                    </div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Indices</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Access major global indices like US30,
+                        NAS100, DAX40.</p>
+                </div>
+                <!-- Stocks Card -->
+                <div
+                    class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant hover:border-tertiary-fixed-dim transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-tertiary-fixed-dim transition-colors">
+                        <span class="material-symbols-outlined" data-icon="business">business</span>
+                    </div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Stocks</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Invest in world-leading companies with
+                        zero commission.</p>
+                </div>
+                <!-- Crypto Card -->
+                <div
+                    class="bg-white p-lg rounded-xl shadow-sm border border-outline-variant hover:border-tertiary-fixed-dim transition-colors group cursor-pointer">
+                    <div
+                        class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-tertiary-fixed-dim transition-colors">
+                        <span class="material-symbols-outlined" data-icon="currency_bitcoin">currency_bitcoin</span>
+                    </div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Crypto</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Trade 24/7 across BTC, ETH, and major
+                        altcoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 5: Account Types -->
+    <section class="py-xxl px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-h1 text-h1 text-primary mb-4">Choose Your Path to Profit</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Flexible account types tailored for every level
+                of trader.</p>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th class="p-lg rounded-tl-xl font-label-caps text-label-caps">Features</th>
+                        <th class="p-lg font-label-caps text-label-caps text-center">Standard</th>
+                        <th class="p-lg bg-tertiary-fixed-dim text-primary font-label-caps text-label-caps text-center">
+                            Pro Premium</th>
+                        <th class="p-lg rounded-tr-xl font-label-caps text-label-caps text-center">Elite Raw</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr class="border-b border-outline-variant">
+                        <td class="p-lg font-body-md text-primary font-semibold">Minimum Deposit</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">$100</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">$2,000</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">$10,000</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant">
+                        <td class="p-lg font-body-md text-primary font-semibold">Spreads From</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">1.2 Pips</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">0.8 Pips</td>
+                        <td class="p-lg text-center font-numeric-data text-on-surface-variant">0.0 Pips</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant">
+                        <td class="p-lg font-body-md text-primary font-semibold">Commission</td>
+                        <td class="p-lg text-center font-body-sm text-on-surface-variant">Zero</td>
+                        <td class="p-lg text-center font-body-sm text-on-surface-variant">Zero</td>
+                        <td class="p-lg text-center font-body-sm text-on-surface-variant">$3.50 Per Side</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant">
+                        <td class="p-lg font-body-md text-primary font-semibold">Personal Manager</td>
+                        <td class="p-lg text-center"><span class="material-symbols-outlined text-outline"
+                                data-icon="close">close</span></td>
+                        <td class="p-lg text-center"><span class="material-symbols-outlined text-secondary"
+                                data-icon="check_circle">check_circle</span></td>
+                        <td class="p-lg text-center"><span class="material-symbols-outlined text-secondary"
+                                data-icon="check_circle">check_circle</span></td>
+                    </tr>
+                    <tr>
+                        <td class="p-lg"></td>
+                        <td class="p-lg text-center">
+                            <button
+                                class="border border-primary text-primary px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-primary hover:text-white transition-all">START</button>
+                        </td>
+                        <td class="p-lg text-center">
+                            <button
+                                class="bg-primary text-white px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-slate-800 transition-all">UPGRADE</button>
+                        </td>
+                        <td class="p-lg text-center">
+                            <button
+                                class="border border-primary text-primary px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-primary hover:text-white transition-all">SELECT</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!-- Section 7: Platform -->
+    <section class="py-xxl navy-gradient text-white overflow-hidden" id="platform">
+        <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="relative z-10">
+                    <img class="w-full h-auto drop-shadow-2xl"
+                        data-alt="Modern MacBook and high-end smartphone displaying synchronized trading charts with green and red candlestick patterns"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoMqG84T4tdZ-rgjukkU7HW6e4EeeOXsTsSbNigBVvgR9Kn7NewNk1AVuKUBTfedNXZiQZv_C8nzOYS8LEXmlkforON3xuSbVsaJS8iurApG25tzu-op9VC_UjsJcfaX34pdgR6WbNDuJAlyg0dHK85PVGPVWqXW2xCBH_-0lL5S7VKHmRZZK5PHeX1MfMFgdGJP_NcvPC3FVjJppyqzWlSJpFMnlcUX9poXRvCybwbV1sWzUbom2VrZSDWNhuOuNa7qHiWLiFQ5Rr" />
+                </div>
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-tertiary-fixed-dim/20 blur-3xl rounded-full"></div>
+            </div>
+            <div>
+                <span class="font-label-caps text-label-caps text-tertiary-fixed-dim block mb-4 uppercase">Metatrader
+                    5</span>
+                <h2 class="font-display text-h1 mb-6">The Power of Professional Trading</h2>
+                <p class="font-body-lg text-on-primary-container mb-8">Harness the world's most advanced multi-asset
+                    platform. From algorithmic trading to depth of market analysis, everything you need is at your
+                    fingertips.</p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary-fixed-dim mt-1"
+                            data-icon="devices">devices</span>
+                        <div>
+                            <h4 class="font-h3 text-h3">Cross-Device Sync</h4>
+                            <p class="font-body-sm text-on-primary-container">Start a trade on desktop, manage it on the
+                                go with your mobile.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-tertiary-fixed-dim mt-1"
+                            data-icon="code">code</span>
+                        <div>
+                            <h4 class="font-h3 text-h3">Advanced EA Support</h4>
+                            <p class="font-body-sm text-on-primary-container">Optimized environment for Expert Advisors
+                                and automated systems.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="wealth-gold-gradient text-primary px-8 py-3 rounded-lg font-label-caps text-label-caps flex items-center gap-2">
+                        <span class="material-symbols-outlined" data-icon="download">download</span> DOWNLOAD MT5
+                    </button>
+                    <button
+                        class="bg-white/10 text-white px-8 py-3 rounded-lg font-label-caps text-label-caps hover:bg-white/20">
+                        WEB TERMINAL
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 8: How It Works -->
+    <section class="py-xxl px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="font-h1 text-h1 text-primary">Your Journey Starts Here</h2>
+            </div>
+            <div class="relative grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-xl relative z-10">
+                        1</div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Register</h4>
+                    <p class="font-body-sm text-on-surface-variant">Complete our secure application form in 2 minutes.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-xl relative z-10">
+                        2</div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Verify</h4>
+                    <p class="font-body-sm text-on-surface-variant">Fast-track identity check for immediate market
+                        access.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-xl relative z-10">
+                        3</div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Fund</h4>
+                    <p class="font-body-sm text-on-surface-variant">Securely deposit funds using your preferred method.
+                    </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-16 h-16 bg-tertiary-fixed-dim rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-xl relative z-10">
+                        4</div>
+                    <h4 class="font-h3 text-h3 text-primary mb-2">Trade</h4>
+                    <p class="font-body-sm text-on-surface-variant">Launch MT5 and start trading global markets.</p>
+                </div>
+                <!-- Timeline Line -->
+                <div class="absolute top-8 left-0 w-full h-px bg-outline-variant hidden md:block"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 10: Testimonials -->
+    <section class="py-xxl bg-surface-container-low overflow-hidden">
+        <div class="px-8 max-w-7xl mx-auto mb-12">
+            <h2 class="font-h1 text-h1 text-primary">Join 100,000+ Active Traders</h2>
+        </div>
+        <div class="flex space-x-6 animate-marquee">
+            <!-- Mock Infinite Carousel -->
+            <div class="flex gap-6">
+                <div class="min-w-[400px] bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+                    <div class="flex text-tertiary-fixed-dim mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md text-on-surface mb-6 italic">"The execution speed on the Elite Raw account is
+                        unmatched. I've never seen slippage like this before. Exceptional service."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <h5 class="font-h3 text-body-md font-bold">Marcus Thorne</h5>
+                            <p class="font-body-sm text-on-surface-variant">Professional Forex Trader</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[400px] bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+                    <div class="flex text-tertiary-fixed-dim mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md text-on-surface mb-6 italic">"Skylink's customer support is top-notch. Any
+                        issues are resolved in minutes, not days. Makes a huge difference for my strategy."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <h5 class="font-h3 text-body-md font-bold">Elena Rodriguez</h5>
+                            <p class="font-body-sm text-on-surface-variant">Day Trader</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[400px] bg-white p-lg rounded-xl shadow-sm border border-outline-variant">
+                    <div class="flex text-tertiary-fixed-dim mb-4">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <p class="font-body-md text-on-surface mb-6 italic">"Transparent pricing and a reliable platform.
+                        I've moved my entire portfolio to Skylink and haven't looked back."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200"></div>
+                        <div>
+                            <h5 class="font-h3 text-body-md font-bold">James Wilson</h5>
+                            <p class="font-body-sm text-on-surface-variant">Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section 11: FAQ -->
+    <section class="py-xxl px-8 max-w-3xl mx-auto" id="faq">
+        <h2 class="font-h1 text-h1 text-primary text-center mb-12">Common Questions</h2>
+        <div class="space-y-4">
+            <div
+                class="border border-outline-variant rounded-xl p-6 hover:bg-surface-container-low transition-colors cursor-pointer">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-h3 text-body-lg text-primary">How long does withdrawal take?</h4>
+                    <span class="material-symbols-outlined" data-icon="add">add</span>
+                </div>
+            </div>
+            <div
+                class="border border-outline-variant rounded-xl p-6 hover:bg-surface-container-low transition-colors cursor-pointer">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-h3 text-body-lg text-primary">Is Skylink Markets regulated?</h4>
+                    <span class="material-symbols-outlined" data-icon="add">add</span>
+                </div>
+            </div>
+            <div
+                class="border border-outline-variant rounded-xl p-6 hover:bg-surface-container-low transition-colors cursor-pointer">
+                <div class="flex justify-between items-center">
+                    <h4 class="font-h3 text-body-lg text-primary">What is the maximum leverage available?</h4>
+                    <span class="material-symbols-outlined" data-icon="add">add</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="py-xxl px-8">
+        <div
+            class="max-w-5xl mx-auto wealth-gold-gradient rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 opacity-10">
+                <img class="w-full h-full object-cover"
+                    data-alt="Intricate geometric pattern of financial chart lines and dots on a golden background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyB3c5_K2bGuh7PFJQ-mab56kcJ_-qAVHtXmY2e7KGVg3CBWT5sFhsXdbcQ1hcc-0XFxvH3wHCCv1lULHwq8urmn1lnNo75utf3F3hLW6g3t2DwY14PshBrYChnCsi2Z4DpOmT5TnYZ01Y36PmPmE0mVC201DD7vRdSu-aBOHeajcb8xRS6xIJfGeh9lwXtLaNkrqkncqtqeSqOqjcYqEtfoauqQ3cdN2Bz5cYL6ceE0IDGWX_o4M28avBHuHVcF3aqkNCfWd8NgmD" />
+            </div>
+            <div class="relative z-10">
+                <h2 class="font-display text-display text-primary mb-6">Start Your Trading Journey Today</h2>
+                <p class="font-body-lg text-primary/80 mb-10 max-w-2xl mx-auto">Open a live account in less than 5
+                    minutes and gain access to institutional trading conditions.</p>
+                <button
+                    class="bg-primary text-white px-10 py-5 rounded-xl font-label-caps text-label-caps text-lg shadow-xl hover:scale-105 transition-transform">
+                    GET STARTED NOW
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 w-full pt-16 pb-8 border-t border-slate-800">
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8 px-8 max-w-7xl mx-auto">
+            <div class="lg:col-span-2">
+                <div class="text-xl font-bold text-white mb-4">Skylink Markets</div>
+                <p class="font-manrope text-xs leading-relaxed text-slate-400 max-w-xs mb-6">Empowering traders
+                    worldwide with innovative technology, exceptional support, and transparent market access since 2014.
+                </p>
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined text-slate-400 hover:text-amber-500 cursor-pointer"
+                        data-icon="public">public</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-amber-500 cursor-pointer"
+                        data-icon="share">share</span>
+                    <span class="material-symbols-outlined text-slate-400 hover:text-amber-500 cursor-pointer"
+                        data-icon="mail">mail</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Trading</h4>
+                <ul class="space-y-3 font-manrope text-xs text-slate-400">
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Markets
+                        Overview</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Trading
+                        Tools</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Economic
+                        Calendar</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Contract
+                        Specs</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Company</h4>
+                <ul class="space-y-3 font-manrope text-xs text-slate-400">
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">About Us
+                    </li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">News &amp;
+                        Blog</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Contact
+                    </li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Partnership
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Legal</h4>
+                <ul class="space-y-3 font-manrope text-xs text-slate-400">
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Privacy
+                        Policy</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Terms of
+                        Service</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Cookie
+                        Policy</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Risk
+                        Disclosure</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Support</h4>
+                <ul class="space-y-3 font-manrope text-xs text-slate-400">
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Help Center
+                    </li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Live Chat
+                    </li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">Technical
+                        Support</li>
+                    <li class="hover:text-amber-500 hover:translate-x-1 transition-transform cursor-pointer">FAQ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-16 px-8 max-w-7xl mx-auto">
+            <div class="border-t border-slate-800 pt-8">
+                <p class="font-manrope text-xs leading-relaxed text-slate-400 text-center">© 2024 Skylink Markets. All
+                    rights reserved. High-risk investment warning: Trading involves significant risk.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
