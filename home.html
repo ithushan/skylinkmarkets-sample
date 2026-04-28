@@ -163,21 +163,28 @@
         </button>
     </nav>
     <!-- Section 1: Hero -->
-    <section class="relative pt-32 pb-24 lg:pt-48 lg:pb-40 navy-gradient overflow-hidden" id="home">
-        <div class="absolute inset-0 opacity-20">
-            <div
-                class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container blur-[160px] rounded-full -mr-96 -mt-96">
-            </div>
-            <div
-                class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary-fixed-dim blur-[140px] rounded-full -ml-48 -mb-48">
-            </div>
+    <section class="relative min-h-screen flex items-center overflow-hidden py-24 lg:py-40" id="home">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+            <video src="/bg.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+
+            <!-- <div class="absolute inset-0 opacity-30 z-20 pointer-events-none">
+                <div
+                    class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container blur-[160px] rounded-full -mr-96 -mt-96">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary-fixed-dim blur-[140px] rounded-full -ml-48 -mb-48">
+                </div>
+            </div> -->
         </div>
-        <div class="relative max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+
+        <div class="relative z-30 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div class="animate-fade-in-up">
                 <h1 class="font-display text-display text-white mb-6 leading-tight">
                     Trade Global Markets with <span class="text-tertiary-fixed-dim">Confidence</span>
                 </h1>
-                <p class="font-body-lg text-body-lg text-on-primary-container mb-10 max-w-xl">
+                <p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">
                     Experience institutional-grade liquidity, ultra-low latency execution, and 24/7 expert support with
                     the world's most trusted broker.
                 </p>
@@ -187,23 +194,22 @@
                         Open Live Account
                     </button>
                     <button
-                        class="border border-outline/30 text-white px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-white/5 transition-all">
+                        class="border border-white/30 text-white px-8 py-4 rounded-lg font-label-caps text-label-caps hover:bg-white/10 backdrop-blur-sm transition-all">
                         Try Demo Account
                     </button>
                 </div>
             </div>
-            <div class="relative">
-                <div class="aspect-square relative flex items-center justify-center">
-                    <div class="absolute inset-0 rounded-full border border-white/5 animate-pulse"></div>
-                    <img class="w-full h-full object-contain relative z-10"
-                        data-alt="High-detail 3D render of a digital global market sphere with glowing financial data nodes and golden light trails"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLWmqpT-Qsrz-RWykCimZ2oVAsnmgJ9hFBF_dmXnN5XXadypo3ClO4FeFyLWdDCyryfCgU5tYCFF_AqDOwYaUcJ9fXXbsSigjDu33TNLuyKnz50XyuItE--R_BP3OfCc_qdiiKUdYI4TbuY9AlhfCKM7H_NYp5999KXDEyWN4lH7joRy00D9YBu_xg-imOi6gpnEl6WLEWi7VnOUr-FghcZjEsBOhHAuqmnm_4lyNuA1KEz6sR_HY1-Jvjnmud9qfECJYTbxNVGiL7" />
+
+            <div class="relative hidden lg:flex justify-center">
+                <div class="aspect-square w-full max-w-md relative flex items-center justify-center">
+                    <div class="absolute inset-0 rounded-full border border-white/10 animate-ping"></div>
+                    <div class="absolute inset-4 rounded-full border border-white/5 animate-pulse"></div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Section 2: Trust Bar -->
-    <div class="relative z-20 -mt-10 px-8">
+    <!-- <div class="relative z-20 -mt-10 px-8">
         <div
             class="max-w-5xl mx-auto glass-card rounded-2xl p-8 flex flex-wrap justify-between items-center gap-8 shadow-2xl">
             <div class="flex items-center gap-3">
@@ -227,7 +233,7 @@
                 <span class="font-label-caps text-label-caps text-white">LOW SPREADS</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Section 3: About Preview (Bento Grid) -->
     <section class="py-xxl px-8 max-w-7xl mx-auto" id="about">
         <div class="text-center mb-16">
